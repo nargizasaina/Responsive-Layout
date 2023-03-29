@@ -1,0 +1,11 @@
+.main-title{
+    text-transform: uppercase;
+    font-family: $add-font;
+    font-size: 63px;
+    max-width: 428px;
+    text-align: center;
+    font-weight: normal;
+    &__span{
+        color: $color-yellow;
+    }
+}

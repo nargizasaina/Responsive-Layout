@@ -1,0 +1,77 @@
+.main-nav {
+    background: url(../images/yellow-back.jpg) 0 repeat;
+
+    @include lg {
+        max-width: 455px;
+        background-color: $color-yellow;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        @include md {
+            display: flex;
+            flex-wrap: nowrap;
+            text-align: right;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        padding: 10px;
+
+        @include md {
+            padding: 17px 13px 14px 17px;
+            border-right: 1px solid #d6ac05;
+
+            &:last-of-type {
+                border-right: none;
+            }
+
+            @include lg {
+                padding: 8px 25px 8px 8px;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $add-font;
+        font-size: 15px;
+        color: #9b7d08;
+
+        &::before {
+            content: "";
+            width: 24px;
+            height: 19px;
+            display: inline-block;
+            background: url(../images/head-sprite.png) 0 0 no-repeat;
+            margin-right: 9px;
+        }
+
+        @include md {
+            font-size: 19px;
+        }
+
+        @include lg {
+            font-size: 17px;
+        }
+
+        &-about::before {
+            background-position: -10px -48px;
+        }
+
+        &-service::before {
+            background-position: -54px -10px;
+        }
+
+        &-contact::before {
+            background-position: -10px -10px;
+        }
+    }
+}

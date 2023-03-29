@@ -1,0 +1,38 @@
+.footer {
+    background-color: #4c4c4c;
+
+    &__inner {
+        padding: 3px 0;
+
+        @include md {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include lg {
+            padding: 0 7.2% 0 6.8%;
+        }
+    }
+
+    &__logo_img {
+        max-width: 135px;
+
+        @include lg {
+            max-width: 231px;
+        }
+    }
+
+    &__text {
+        padding-right: 4px;
+
+        @include md {
+            font-size: 17px;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+    }
+}

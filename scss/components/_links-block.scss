@@ -1,0 +1,62 @@
+.links-block {
+    background: url(../images/white-back.jpg) 0 repeat;
+    padding-top: 5%;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__box {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+
+        @include md {
+            max-width: 33.3333%;
+        }
+    }
+
+    &__item {
+        text-decoration: none;
+
+        &::before {
+            content: "";
+            width: 89px;
+            height: 69px;
+            display: inline-block;
+            background: url(../images/center-sprite.png) 50% 50% no-repeat;
+        }
+
+        &_design::before {
+            background-position: -10px -10px;
+        }
+
+        &_custom::before {
+            background-position: -99px -10px;
+        }
+
+        &_free::before {
+            background-position: 3px -92px;
+        }
+    }
+
+    &__title {
+        font-family: $add-font;
+        font-size: 17px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 7px 0 23px;
+        letter-spacing: 0.1px;
+
+        @include md {
+            font-size: 23px;
+        }
+
+        @include lg {
+            font-size: 27px;
+            margin-bottom: 35px;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.header {
+    background: linear-gradient(to bottom, #5d5d5d, #464646);
+
+    @include lg {
+        background: url(../images/head-back.jpg) 0 0 / cover no-repeat;
+        padding-bottom: 7.7%;
+    }
+
+    &__top {
+        @include md {
+            display: flex;
+        }
+
+        @include lg {
+            align-items: center;
+            margin-bottom: 6%;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        padding: 4px 0 3px;
+
+        @include md {
+            width: 30%;
+        }
+
+        @include lg {
+            padding-top: 28px;
+        }
+    }
+
+    &__link {
+        font-family: $add-font;
+        text-decoration: none;
+        color: $color-white;
+        text-transform: uppercase;
+        display: none;
+        font-size: 13px;
+
+        @include lg {
+            display: block;
+            margin-top: 4.7%;
+        }
+    }
+
+    &__main-nav {
+        margin: 0 -10px;
+
+        @include md {
+            width: 75%;
+        }
+
+        @include lg {
+            margin: 28px 0 0 auto;
+            max-width: 455px;
+        }
+    }
+
+    &__content {
+        margin: 0 -10px;
+
+        @include lg {
+            margin: 0;
+            display: flex;
+            padding-right: 7%;
+            justify-content: space-between;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+
+        @include lg {
+            max-width: 551px;
+        }
+    }
+
+    &__main-title {
+        display: none;
+
+        @include lg {
+            display: block;
+            margin-top: 49px;
+            line-height: 76px;
+        }
+    }
+}
